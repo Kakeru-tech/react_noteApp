@@ -16,6 +16,8 @@ const App = () => {
   const [currentNote, setCurrentNote] = useState(false);
   const [cache, setCache] = useState(0);
   const [userValified,setUserValified] = useState(false);
+
+  //comment check
   
 
 
