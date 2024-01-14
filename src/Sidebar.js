@@ -106,7 +106,7 @@ const Sidebar = ({ notes, onAddNote, onDeleteNote, setCurrentNote, currentNote, 
           >
             <div className="sidebar-note-title">
               <strong>{obj.title}</strong>
-              <button onClick={() => deleteNote(obj.id)}>Delete</button>
+              {/* <button onClick={() => deleteNote(obj.id)}>Delete</button> */}
             </div>
 
             <small className="note-meta">

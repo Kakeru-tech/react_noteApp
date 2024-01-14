@@ -160,21 +160,23 @@ button:hover {
   border: 1px solid #ddd;
   margin: 20px;
   width: 40%;
+  height: 320px;
   padding: 10px;
   resize: none;
   background-color: rgba(0, 0, 0, 0.766);
-  color:rgb(186, 188, 190);
+  color: rgb(186, 188, 190);
 }
 
-.markdown-preview-body2{
+.markdown-preview-body2 {
   width: 40%;
+  height: fit-content;
 }
 
 .displayImg {
   padding: 10px;
   margin: 10px;
   width: 50%;
- 
+
 }
 
 .app-main-note-edit .textArea-title {
@@ -211,7 +213,6 @@ button:hover {
 .app-main-note-preview {
   border-top: 1px solid #ddd;
   background: rgba(0, 0, 0, 0.02);
-  height: fit-content;
 }
 
 .preview-title {
@@ -233,7 +234,6 @@ button:hover {
 
   display: flex;
   justify-content: flex-start;
-  height: 300px;
   width: 100%;
 }
 
