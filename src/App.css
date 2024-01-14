@@ -16,6 +16,7 @@ body,
   font-size: 16px;
   background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
 }
+
 /*  */
 button {
   background: none;
@@ -138,15 +139,13 @@ button:hover {
 
 
 
-.extArea-body-container,
-.markdown-preview-body {
+.extArea-body-container {
   display: flex;
   justify-content: flex-start;
   height: 300px;
 }
 
-.app-main-note-edit input,
-.textArea-body {
+.app-main-note-edit input {
   display: block;
   border: 1px solid #ddd;
   margin: 20px;
@@ -157,12 +156,25 @@ button:hover {
   font-family: inherit;
 }
 
-.displayImg{
-  width: 45%;
-  height: 95%;
+.textArea-body {
+  border: 1px solid #ddd;
+  margin: 20px;
+  width: 40%;
+  padding: 10px;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.766);
+  color:rgb(186, 188, 190);
+}
+
+.markdown-preview-body2{
+  width: 40%;
+}
+
+.displayImg {
   padding: 10px;
   margin: 10px;
-  
+  width: 50%;
+ 
 }
 
 .app-main-note-edit .textArea-title {
@@ -199,6 +211,7 @@ button:hover {
 .app-main-note-preview {
   border-top: 1px solid #ddd;
   background: rgba(0, 0, 0, 0.02);
+  height: fit-content;
 }
 
 .preview-title {
@@ -212,10 +225,16 @@ button:hover {
   line-height: 1rem;
 }
 
+/* preview mode body1, body2 container */
 .markdown-preview-body {
   padding: 0 25px 0 25px;
   font-size: 1rem;
   line-height: 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  height: 300px;
+  width: 100%;
 }
 
 
@@ -223,6 +242,6 @@ button:hover {
 
 
 /* sidebar.js */
-.createNewNoteCard{
+.createNewNoteCard {
   background-color: rgb(242, 239, 239);
 }

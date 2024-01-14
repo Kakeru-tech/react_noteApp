@@ -263,7 +263,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                             }
 
                                             {/* subBody2 */}
-                                            <ReactMarkdown className='markdown-preview-body'>
+                                            <ReactMarkdown className='markdown-preview-body2'>
                                                 {content.subBody2}
                                             </ReactMarkdown>
                                         </div>

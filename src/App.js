@@ -18,7 +18,7 @@ const App = () => {
   const [userValified,setUserValified] = useState(false);
 
   //comment check
-  
+   
 
 
   useEffect(() => {
