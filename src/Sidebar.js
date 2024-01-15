@@ -24,13 +24,13 @@ const Sidebar = ({ notes, onAddNote, onDeleteNote, setCurrentNote, currentNote, 
     }
   }
 
-  const deleteNote = (id) => {
-    if (userValified) {
-      onDeleteNote(id);
-    } else {
-      setPopupSeen(true);
-    }
-  }
+  // const deleteNote = (id) => {
+  //   if (userValified) {
+  //     onDeleteNote(id);
+  //   } else {
+  //     setPopupSeen(true);
+  //   }
+  // }
 
 
 

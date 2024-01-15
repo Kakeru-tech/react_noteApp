@@ -123,14 +123,13 @@ button:hover {
   color: #999;
 }
 
-/* Editing */
-.app-main-note-edit {
-  padding: 25px;
-}
+
 
 .create-newButton-container {
   display: flex;
   justify-content: space-between;
+  /* padding: 50px; */
+  
 }
 
 .create-discard {
@@ -139,57 +138,30 @@ button:hover {
 
 
 
-.extArea-body-container {
-  display: flex;
-  justify-content: flex-start;
-  height: 300px;
-}
-
-.app-main-note-edit input {
-  display: block;
-  border: 1px solid #ddd;
-  margin: 20px;
-  width: 40%;
-  padding: 10px;
-  resize: none;
-  font-size: inherit;
-  font-family: inherit;
-}
-
 .textArea-body {
   border: 1px solid #ddd;
   margin: 20px;
   width: 40%;
-  height: 320px;
+  height: 330px;
   padding: 10px;
   resize: none;
   background-color: rgba(0, 0, 0, 0.766);
   color: rgb(186, 188, 190);
 }
 
-.markdown-preview-body2 {
-  width: 40%;
-  height: fit-content;
-}
-
-.displayImg {
-  padding: 10px;
-  margin: 10px;
-  width: 50%;
-
-}
-
-.app-main-note-edit .textArea-title {
-  display: block;
+.textArea-body-code {
   border: 1px solid #ddd;
-  margin-bottom: 10px;
-  width: 30%;
-  height: 40px;
-  padding: 10px;
+  margin: 20px;
+  width: 50%;
+  height: 320px;
   resize: none;
-  font-size: inherit;
-  font-family: inherit;
+  background-color: #3a404d;
+  color: rgb(186, 188, 190);
 }
+
+
+
+
 
 .newFileName {
   display: block;
@@ -204,15 +176,26 @@ button:hover {
 }
 
 
-.app-main-note-edit input {
-  height: 50px;
-  font-size: 2rem;
+
+
+
+
+/* main preview------------------------------------------------------------ */
+
+/* preview mode body1, body2 container */
+.markdown-preview-body {
+  padding: 0 25px 0 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-/* Preview */
 .app-main-note-preview {
   border-top: 1px solid #ddd;
   background: rgba(0, 0, 0, 0.02);
+  padding-bottom: 50px;
 }
 
 .preview-title {
@@ -226,16 +209,126 @@ button:hover {
   line-height: 1rem;
 }
 
-/* preview mode body1, body2 container */
-.markdown-preview-body {
-  padding: 0 25px 0 25px;
-  font-size: 1rem;
-  line-height: 2rem;
+.edit-btn{
+  padding-right: 20px;
+}
 
+
+
+/* copy button */
+.copyBtn {
+  padding-top: 10px;
+  padding-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* copy button container */
+.copy-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 15px;
+  color: white;
+  font-size: x-small;
+  align-items: center;
+}
+
+.copyIcon {
+  margin-top: 4px;
+  margin-right: 5px;
+}
+
+.markdown-preview-body2 {
+  width: 50%;
+  height: fit-content;
+}
+
+.displayImg {
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+
+}
+
+/* create a new body button --------------------------------------*/
+.app-main-note-newbtn-container {
+  height: 100px;
+  display: flex;
+}
+
+.app-main-note-newbtn {
+  padding-bottom: 30px;
+  padding-left: 30px;
+  margin: 10px;
+}
+
+.textArea-body-container-createNewMode{
   display: flex;
   justify-content: flex-start;
-  width: 100%;
+  height: 300px;
 }
+
+
+/* edit mode  --------------------------------------------  */
+
+/* Editing */
+.app-main-note-edit {
+  padding: 25px;
+}
+
+
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+.app-main-note-edit input {
+  display: block;
+  border: 1px solid #ddd;
+  margin: 20px;
+  width: 40%;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.app-main-note-edit .textArea-title {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 30%;
+  height: 40px;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.finaliseEdit-container{
+  display: flex;
+  justify-content: space-between;
+   padding: 30px;
+}
+
+/* .textArea-body-container-editMode{
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* main.js */

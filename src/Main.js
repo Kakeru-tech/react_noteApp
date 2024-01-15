@@ -8,6 +8,10 @@ import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { doc, updateDoc } from 'firebase/firestore';
 import { storage, db } from './firebaseConfig';
 
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { FaCopy } from "react-icons/fa";
+
 const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
 
     const [img, setImg] = useState(null);
@@ -243,7 +247,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                             </ReactMarkdown>
 
                                             {/* edit button */}
-                                            <button onClick={() => initEdit(key)}>Edit</button>
+                                            <button className='edit-btn' onClick={() => initEdit(key)}>Edit</button>
                                         </div>
 
                                         <div className='markdown-preview-body'>
@@ -255,11 +259,34 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                                     className='displayImg' alt='' />
 
                                                 // subBody
-                                                : <textarea
-                                                    className='textArea-body'
-                                                    id={`body-subBody-${key}`}
-                                                    value={content.subBody}
-                                                    disabled />
+                                                // : <textarea
+                                                //     className='textArea-body'
+                                                //     id={`body-subBody-${key}`}
+                                                //     value={content.subBody}
+                                                //     disabled />
+                                                // :<pre className='textArea-body-code'>
+                                                //     <code className='language-javascript'>{content.subBody}</code>
+                                                // </pre>
+                                                : <div className='textArea-body-code'>
+                                                    <div className='copy-btn-container'>
+                                                        <button className='copyBtn'>
+                                                            <span className='copyIcon'><FaCopy /></span>Copy
+                                                        </button>
+                                                    </div>
+
+                                                    <SyntaxHighlighter
+                                                        language='js'
+                                                        style={darcula}
+                                                        customStyle={{
+                                                            height: '100%',
+                                                            lineHeight: "1.5",
+                                                            fontSize: "0.8em"
+                                                        }}
+                                                        wrapLongLines={true}
+                                                    >
+                                                        {content.subBody}
+                                                    </SyntaxHighlighter>
+                                                </div>
                                             }
 
                                             {/* subBody2 */}
@@ -281,7 +308,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                         value={newSubTitle}
                                     />
 
-                                    <div className='extArea-body-container'>
+                                    <div className='textArea-body-container-editMode'>
                                         {/* if image, button is [+Message], otherwise [+Image] */}
                                         {(content.img)
 
@@ -352,7 +379,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                         />
                                     </div>
 
-                                    <div className='create-newButton-container'>
+                                    <div className='finaliseEdit-container'>
                                         <button onClick={() => {
                                             setCurrentEdit(key);
                                             editEnd();
@@ -360,7 +387,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
 
                                         <button className='create-discard' onClick={() => {
                                             refresh();
-                                        }} >Discard</button>
+                                        }}>Discard</button>
                                     </div>
                                 </div>
                         ))
@@ -371,8 +398,8 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
 
                 {/* show [create a new button] if not editing */}
                 {(currentEdit === -1) &&
-                    <div className='app-main-note-edit'>
-                        <button onClick={createANew}
+                    <div className='app-main-note-newbtn-container'>
+                        <button onClick={createANew} className='app-main-note-newbtn'
                         >[ + Create a new]</button>
                     </div>
                 }
@@ -388,7 +415,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                             onChange={(e) => setNewSubTitle(e.target.value)}
                         />
 
-                        <div className='extArea-body-container'>
+                        <div className='textArea-body-container-createNewMode'>
 
                             {/* if image, button is [+Message], otherwise [+Image] */}
                             {img
