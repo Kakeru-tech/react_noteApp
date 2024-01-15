@@ -241,7 +241,7 @@ const Main = ({ currentNote, onUpdateNote, userValified, setUserValified }) => {
                                         className="app-main-note-preview" >
 
                                         {/* subtitle */}
-                                        <div className='create-newButton-container'>
+                                        <div className='preview-title-container'>
                                             <ReactMarkdown className='markdown-preview-title'>
                                                 {content.subTitle}
                                             </ReactMarkdown>

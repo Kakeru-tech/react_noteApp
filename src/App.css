@@ -125,12 +125,7 @@ button:hover {
 
 
 
-.create-newButton-container {
-  display: flex;
-  justify-content: space-between;
-  /* padding: 50px; */
-  
-}
+
 
 .create-discard {
   color: red;
@@ -209,7 +204,7 @@ button:hover {
   line-height: 1rem;
 }
 
-.edit-btn{
+.edit-btn {
   padding-right: 20px;
 }
 
@@ -250,6 +245,12 @@ button:hover {
 
 }
 
+.preview-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* create a new body button --------------------------------------*/
 .app-main-note-newbtn-container {
   height: 100px;
@@ -262,11 +263,19 @@ button:hover {
   margin: 10px;
 }
 
-.textArea-body-container-createNewMode{
+.textArea-body-container-createNewMode {
   display: flex;
   justify-content: flex-start;
   height: 300px;
 }
+
+.create-newButton-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+
 
 
 /* edit mode  --------------------------------------------  */
@@ -305,10 +314,10 @@ button:hover {
   font-family: inherit;
 }
 
-.finaliseEdit-container{
+.finaliseEdit-container {
   display: flex;
   justify-content: space-between;
-   padding: 30px;
+  padding: 30px;
 }
 
 /* .textArea-body-container-editMode{

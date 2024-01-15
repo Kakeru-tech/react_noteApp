@@ -8,7 +8,7 @@ const PopupAuth = ({ setPopupSeen, setUserValified }) => {
 
     const loginAttempt = () => {
 
-        if (password === 'kakeru') {
+        if (password === process.env.REACT_APP_PW) {
             setUserValified(true);
             setPopupSeen(false);
         }
